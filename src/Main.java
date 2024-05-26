@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Main {
@@ -5,21 +6,34 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        // условные консрукции
+        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Введите роль: ");
+//        String role = scanner.nextLine();
+//        System.out.println("Введите пароль: ");
+//        String pass = scanner.nextLine();
+//        if (role.equals("Admin") && pass.equals("123")) {
+//            System.out.println("Полные права");
+//        } else {
+//            System.out.println("Как тебя зовут?");
+//            System.out.println("Введите свое имя: ");
+//            String name = scanner.nextLine();
+//        }
+        System.out.print("Число: ");
+        int num = scanner.nextInt();
+        switch (num) {
+            case 1:
+                System.out.println("num = 1");
+                break;
+            case 2:
+                System.out.println("num = 2");
+                break;
+            default:
+                System.out.println("Нет совпадений");
 
-        System.out.print("Введите первое число: ");
-        float num1 = scan.nextFloat();
+        }
 
 
-        System.out.print("Введите второе число: ");
-        float num2 = scan.nextFloat();
-
-        float res1 = num1 + num2;
-        float res2 = num1 - num2;
-        float res3 = num1 * num2;
-        float res4 = num1 / num2;
-
-        System.out.println(res1 + "\n" + res2 + "\n" + res3 + "\n" + res4 + "\n");
 
 
 
