@@ -6,44 +6,28 @@ public class Main {
 
 
     public static void main(String[] args) {
-        // условные консрукции
-        Scanner scanner = new Scanner(System.in);
+        // циклы for, while, do-while
+//        for (float i = 100; i > 10; i-=12) {
+//            System.out.println("Цикл: " + i);
+//        }
+//
+//        int i = 0;
+//        while (i <= 100) {
+//            System.out.println("Цикл: " + i);
+//            i++;
+//        }
+//
+//        int i = 1;
+//        do {
+//            System.out.println("Цикл: " + i);
+//            i ++;
+//        } while (i < 10);
 
-        System.out.print("Введите первое число: ");
-        int num_1 = scanner.nextInt();
-
-        System.out.print("Введите второе число: ");
-        int num_2 = scanner.nextInt();
-
-        System.out.print("Введите опрератор: ");
-        String oper = scanner.nextLine();
-        oper = scanner.nextLine();
-
-        int result;
-
-        switch (oper) {
-            case "+":
-                result = num_1 + num_2;
-                System.out.println("Результат: " + result);
-                break;
-            case "-":
-                result = num_1 - num_2;
-                System.out.println("Результат: " + result);
-                break;
-            case "*":
-                result = num_1 * num_2;
-                System.out.println("Результат: " + result);
-                break;
-            case "/":
-                if (num_2 == 0) {
-                    System.out.println("Деление на 0!");
-                } else {
-                    result = num_1 / num_2;
-                    System.out.println("Результат: " + result);
-                }
-                break;
-            default:
-                System.out.println("Проверь ввод");
+        for (int i = 5; i < 25; i+=2) {
+            if (i % 2 == 0){
+                continue;
+            }
+            System.out.println("Элемент: " + i);
         }
 
 
