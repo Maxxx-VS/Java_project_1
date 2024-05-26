@@ -8,31 +8,43 @@ public class Main {
     public static void main(String[] args) {
         // условные консрукции
         Scanner scanner = new Scanner(System.in);
-//        System.out.println("Введите роль: ");
-//        String role = scanner.nextLine();
-//        System.out.println("Введите пароль: ");
-//        String pass = scanner.nextLine();
-//        if (role.equals("Admin") && pass.equals("123")) {
-//            System.out.println("Полные права");
-//        } else {
-//            System.out.println("Как тебя зовут?");
-//            System.out.println("Введите свое имя: ");
-//            String name = scanner.nextLine();
-//        }
-        System.out.print("Число: ");
-        int num = scanner.nextInt();
-        switch (num) {
-            case 1:
-                System.out.println("num = 1");
+
+        System.out.print("Введите первое число: ");
+        int num_1 = scanner.nextInt();
+
+        System.out.print("Введите второе число: ");
+        int num_2 = scanner.nextInt();
+
+        System.out.print("Введите опрератор: ");
+        String oper = scanner.nextLine();
+        oper = scanner.nextLine();
+
+        int result;
+
+        switch (oper) {
+            case "+":
+                result = num_1 + num_2;
+                System.out.println("Результат: " + result);
                 break;
-            case 2:
-                System.out.println("num = 2");
+            case "-":
+                result = num_1 - num_2;
+                System.out.println("Результат: " + result);
+                break;
+            case "*":
+                result = num_1 * num_2;
+                System.out.println("Результат: " + result);
+                break;
+            case "/":
+                if (num_2 == 0) {
+                    System.out.println("Деление на 0!");
+                } else {
+                    result = num_1 / num_2;
+                    System.out.println("Результат: " + result);
+                }
                 break;
             default:
-                System.out.println("Нет совпадений");
-
+                System.out.println("Проверь ввод");
         }
-
 
 
 
