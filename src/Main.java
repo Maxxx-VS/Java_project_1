@@ -18,6 +18,7 @@ public class Main {
 
         short num2 = 17;
         int result2 = summa((short)10, num2);
+        info(String.valueOf(result2));
 
     }
 
