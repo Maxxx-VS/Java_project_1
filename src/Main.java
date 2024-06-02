@@ -1,4 +1,5 @@
 import javax.sound.midi.Soundbank;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -6,18 +7,24 @@ public class Main {
 
 
     public static void main(String[] args) {
-        // многомерные массивы данных
-        char [][] dvumer = new char[2][2];
-        dvumer[0][0] = 't';
-        System.out.println(dvumer[0][0]);
+        // коллекции
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(50);
+        numbers.add(1, 45);
 
-        byte[][] nums = new byte[][] {
-                {5, 7},
-                {7, 3},
-                {2, 0}
-        };
-        nums[1][1] = 67;
-        System.out.println(nums[1][1]);
+        // System.out.println(numbers.size());
+       // System.out.println(numbers.get(1));
+        numbers.remove(1);
+        numbers.clear();
+
+
+        for(Integer el : numbers) {
+            System.out.println(el);
+        }
+
+
+
 
 
 
