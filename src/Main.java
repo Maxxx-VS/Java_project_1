@@ -9,30 +9,26 @@ public class Main {
 
     public static void main(String[] args) {
         // методы
-//        for (int i = 0; i < 3; i++){
-//            info("Hello");
-//        }
+        byte[] nums1 = new byte[] {5, 6, 8};
+        byte[] nums2 = new byte[] {15, 16, 18};
 
-        short num = 7;
-        int result1 = summa((short)5, num);
+        int summ1 = summsArray(nums1);
+        System.out.println(summ1);
 
-        short num2 = 17;
-        int result2 = summa((short)10, num2);
-        info(String.valueOf(result2));
 
-    }
+        int summ2 = summsArray(nums2);
+        System.out.println(summ2);
 
-    public static int summa(short a, short b) {
-        int res = a + b;
-        String result = "Результат: " + res;
-        info(result);
-        return res;
-    }
 
-    public static void info(String word) {
-        System.out.print(word);
-        System.out.println("!");
-    }
+        }
 
+        public static int summsArray(byte[] arr) {
+            int summa = 0;
+            for (byte i = 0; i < arr.length ; i++) {
+                summa += arr[i];
+            }
+            return summa;
+        }
 
 }
+
