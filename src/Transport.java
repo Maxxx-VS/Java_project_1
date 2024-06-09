@@ -6,6 +6,7 @@ public class Transport {
     private String color;
     private byte[] coordinate;
 
+
     public Transport(float _speed, int _weight, String _color, byte[] _coordinate) {
         // Join to DB
         System.out.println("Object created");
