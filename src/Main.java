@@ -8,26 +8,29 @@ public class Main {
 
 
     public static void main(String[] args) {
-        // методы
-        byte[] nums1 = new byte[] {5, 6, 8};
-        byte[] nums2 = new byte[] {15, 16, 18};
+        // ООП классы и объект
+        Transport bmw = new Transport();
+        bmw.setValues(250.5f, 2500, "White", new byte[] {0, 0, 0});
+        String res1 = bmw.getValues();
+        System.out.println(res1);
 
-        int summ1 = summsArray(nums1);
-        System.out.println(summ1);
+//        bmw.speed = 250.5f;
+//        bmw.weight = 2500;
+//        bmw.color = "White";
+//        bmw.coordinate = new byte[] {0, 0, 0};
+
+        Transport truck = new Transport();
+        truck.speed = 140.5f;
+        truck.weight = 5600;
+        truck.color = "Red";
+        truck.coordinate = new byte[] {100, 0, 100};
+
+        System.out.println("Truck speed: " + truck.speed);
+        System.out.println("BMW speed: " + bmw.speed);
 
 
-        int summ2 = summsArray(nums2);
-        System.out.println(summ2);
 
 
-        }
-
-        public static int summsArray(byte[] arr) {
-            int summa = 0;
-            for (byte i = 0; i < arr.length ; i++) {
-                summa += arr[i];
-            }
-            return summa;
         }
 
 }
